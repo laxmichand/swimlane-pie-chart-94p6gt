@@ -135,9 +135,9 @@ export class AppComponent {
   gradientBar = false;
   showLegendBar = false;
   showXAxisLabelBar = true;
-  // xAxisLabelBar = 'Country';
+  xAxisLabelBar = 'Country';
   showYAxisLabelBar = true;
-  // yAxisLabelBar = 'Population';
+  yAxisLabelBar = 'Population';
 
   colorSchemeBar = {
     domain: ['#c9c9c9', '#58b4cd', '#9247b4', '#45ae94', '#fa631d'],
