@@ -160,8 +160,8 @@ export class AppComponent {
   yAxisLine: boolean = true;
   showYAxisLabelLine: boolean = true;
   showXAxisLabelLine: boolean = true;
-  xAxisLabelLine: string = 'Year';
-  yAxisLabelLine: string = 'Population';
+  xAxisLabelLine: string = 'Time';
+  yAxisLabelLine: string = 'Pressure(PSI)';
   timelineLine: boolean = true;
 
   colorSchemeLine = {

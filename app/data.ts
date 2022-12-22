@@ -172,16 +172,16 @@ export var multiLine = [
     name: 'Germany',
     series: [
       {
-        name: '1990',
-        value: 62000000,
+        name: '9:22 AM',
+        value: 400,
       },
       {
-        name: '2010',
-        value: 73000000,
+        name: '9:24 AM',
+        value: 600,
       },
       {
-        name: '2011',
-        value: 89400000,
+        name: '9:26 AM',
+        value: 1000,
       },
     ],
   },
@@ -190,16 +190,16 @@ export var multiLine = [
     name: 'USA',
     series: [
       {
-        name: '1990',
-        value: 250000000,
+        name: '9:22 AM',
+        value: 500,
       },
       {
-        name: '2010',
-        value: 309000000,
+        name: '9:28 AM',
+        value: 300,
       },
       {
-        name: '2011',
-        value: 311000000,
+        name: '9:20 AM',
+        value: 200,
       },
     ],
   },
@@ -208,16 +208,16 @@ export var multiLine = [
     name: 'France',
     series: [
       {
-        name: '1990',
-        value: 58000000,
+        name: '9:18 AM',
+        value: 800,
       },
       {
-        name: '2010',
-        value: 50000020,
+        name: '9:20 AM',
+        value: 1600,
       },
       {
-        name: '2011',
-        value: 58000000,
+        name: '9:22 AM',
+        value: 1800,
       },
     ],
   },
@@ -225,12 +225,51 @@ export var multiLine = [
     name: 'UK',
     series: [
       {
-        name: '1990',
-        value: 57000000,
+        name: '9:24 AM',
+        value: 1400,
       },
       {
-        name: '2010',
-        value: 62000000,
+        name: '9:25 AM',
+        value: 2400,
+      },
+    ],
+  },
+  {
+    name: 'UK1',
+    series: [
+      {
+        name: '9:26 AM',
+        value: 1400,
+      },
+      {
+        name: '9:32 AM',
+        value: 2400,
+      },
+    ],
+  },
+  {
+    name: 'UK2',
+    series: [
+      {
+        name: '9:28 AM',
+        value: 1400,
+      },
+      {
+        name: '9:29 AM',
+        value: 2400,
+      },
+    ],
+  },
+  {
+    name: 'UK3',
+    series: [
+      {
+        name: '9:30 AM',
+        value: 1400,
+      },
+      {
+        name: '9:31 AM',
+        value: 2400,
       },
     ],
   },

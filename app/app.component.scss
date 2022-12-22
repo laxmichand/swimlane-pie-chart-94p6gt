@@ -23,16 +23,13 @@ $colordata: var(--colordata);
   left: 14px;
   width: max-content;
 }
-.parent {
-  /* height: 200px; */
-}
 .parent > div {
   width: calc(100% / 2);
   height: 100%;
   float: left;
 }
 ::ng-deep .arc:hover {
-  transition: transform 8s !important;
+  transition: transform 8s;
   stroke: $colordata;
   stroke-width: 6px;
 }
