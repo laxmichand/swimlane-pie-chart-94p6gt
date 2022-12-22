@@ -50,5 +50,6 @@
 
 ::ng-deep .ngx-charts .arc:hover {
   transform: scale(1.1) !important;
-  transition: transform 0.2s !important;
+  transition: transform 0.5s !important;
+  padding: 40% !important;
 }
