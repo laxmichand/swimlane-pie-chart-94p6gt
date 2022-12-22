@@ -47,3 +47,11 @@
 /* ::ng-deep .ng-star-inserted:hover {
   background-color: red;
 } */
+.arc:hover {
+  background-color: aqua !important;
+}
+::ng-deep .ngx-charts .arc:hover {
+  background-color: brown !important;
+  transform: scale(1.1) !important;
+  transition: transform 0.2s !important;
+}

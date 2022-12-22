@@ -80,47 +80,47 @@ export var singleBar = [
   },
   {
     name: 'Feb',
-    value: 10,
+    value: 2,
   },
   {
     name: 'Mar',
-    value: 15,
+    value: 6,
   },
   {
     name: 'Apr',
-    value: 20,
+    value: 3,
   },
   {
     name: 'May',
-    value: 25,
+    value: 4,
   },
   {
     name: 'Jun',
-    value: 15,
+    value: 5,
   },
   {
     name: 'Jan',
-    value: 20,
+    value: 3,
   },
   {
     name: 'jul',
-    value: 10,
-  },
-  {
-    name: 'Aug',
     value: 25,
   },
   {
+    name: 'Aug',
+    value: 4,
+  },
+  {
     name: 'Sep',
-    value: 15,
+    value: 2,
   },
   {
     name: 'Nov',
-    value: 20,
+    value: 4,
   },
   {
     name: 'Dec',
-    value: 10,
+    value: 5,
   },
 ];
 

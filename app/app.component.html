@@ -11,7 +11,7 @@
         [labels]="showLabels"
         [doughnut]="isDoughnut"
         [gradient]="true"
-        (select)="onSelect($event, this)"
+        (select)="onSelect($event)"
         (activate)="onActivate($event)"
         (deactivate)="onDeactivate($event)"
       >
@@ -48,8 +48,6 @@
         [legend]="showLegendBar"
         [showXAxisLabel]="showXAxisLabelBar"
         [showYAxisLabel]="showYAxisLabelBar"
-        [xAxisLabel]="xAxisLabelBar"
-        [yAxisLabel]="yAxisLabelBar"
         (select)="onSelectBar($event)"
       >
       </ngx-charts-bar-vertical>
