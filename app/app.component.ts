@@ -39,7 +39,7 @@ export class AppComponent {
     },
     {
       name: 'Vehicle Fire',
-      value: 18,
+      value: 19,
       index: 3,
       extra: {
         color: 'Vehicle',
