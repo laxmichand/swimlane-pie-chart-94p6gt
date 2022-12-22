@@ -1,3 +1,5 @@
+$colordata: var(--colordata);
+
 .div-class {
   position: absolute;
   left: 146px;
@@ -29,63 +31,8 @@
   height: 100%;
   float: left;
 }
-/* 
-::ng-deep .ngx-charts .bar.active,
-.ngx-charts .bar:hover,
-.ngx-charts .cell.active,
-.ngx-charts .cell:hover,
-.ngx-charts .arc.active,
-.ngx-charts .arc:hover,
-.ngx-charts .card.active,
-.ngx-charts .card:hover {
-  opacity: 0.8;
-  -webkit-transition: opacity 100ms ease-in-out !important;
-  transition: opacity 100ms ease-in-out !important;
-  transform: scale(1.1) !important;
-  transition: transform 0.2s !important;
-} */
-/* ::ng-deep .ng-star-inserted:hover {
-  background-color: red;
-} */
-
-// :root {
-//   --colordata: #488cff;
-//   --second-color: #ffff8c;
-// } // we can also define variables with JavaScript
-
-$colordata: var(--colordata);
-
 ::ng-deep .arc:hover {
-  /* transform: scale(1.1) !important; */
-  /* transform: scaleY(1.1) !important; */
-  /* position: relative; */
-  /* padding: 17px 27px; */
   transition: transform 0.5s !important;
-  /* padding: 40% !important; */
-  /* border-radius: 20% important; */
-  /* margin-left: auto !important; */
-  /* margin-right: calc(50vw - 25px) !important; */
-  /* background-color: red; */
-  /* transition: width 0.5s !important; */
-  /* width: 150px !important; */
-  /* transition: background-size 0.3s 0.3s, background-position 0.3s !important; */
-  /* background-size: 100% 100% !important; */
-  /* transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, */
-  /* top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s !important; */
-  /* outline: #4caf50 solid 20px; */
-  /* transform: translateY(-10px); */
-  /* transform: scale(1.1) translateX(-9px) translateY(-9px) !important; */
-  /* outline: -webkit-focus-ring-color auto 5px !important; */
-  /* stroke: rgb(255, 255, 255); */
-  /* stroke-width: 3; */
-  /* stroke: #58b4cc; */
-  // stroke:  var(--background-color);
   stroke: $colordata;
   stroke-width: 6px;
-}
-.path:active {
-  /* transform: scale(1.15) translateX(-9px) translateY(-9px); */
-}
-:focus {
-  outline: -webkit-focus-ring-color auto 5px;
 }

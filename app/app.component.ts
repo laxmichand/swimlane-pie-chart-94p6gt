@@ -89,36 +89,15 @@ export class AppComponent {
     let temp = JSON.parse(JSON.stringify(data)).value.value;
     this.value = ((Number(this.value) * temp) / 100).toString() + `%`;
     Object.assign(this, {});
-    // this.elementRef.nativeElement.class = '::ng-deep .ngx-charts .arc:hover';
-    // this.elementRef.nativeElement.class
-    // this.elementRef.nativeElement.style.setProperty(
-    //   'stroke',
-    //   JSON.parse(JSON.stringify(data)).value.extra.color
-    // );
-
-    // this.elementRef.nativeElement.style.stroke = JSON.parse(
-    //   JSON.stringify(data)
-    // ).value.extra.color;
-    // console.log(document.activeElement);
-    // this.elementRef.nativeElement.style.setProperty('stroke-width', '6px');
     this.colordata = JSON.parse(JSON.stringify(data)).value.extra.color;
-
     document.documentElement.style.setProperty('--colordata', this.colordata);
-
-    console.log(this.colordata);
-    console.log(JSON.parse(JSON.stringify(data)).value.extra.color);
-  }
-  getColor1() {
-    console.log('get color');
   }
 
   onDeactivate(data): void {
     this.name = 'Total Incidents';
     this.value = '107';
     this.getCalculate();
-    // this.elementRef.nativeElement.style.setProperty('stroke', 'transparent');
     Object.assign(this, {});
-    // console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 
   getCalculate() {
