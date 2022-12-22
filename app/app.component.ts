@@ -64,6 +64,7 @@ export class AppComponent {
 
   name = 'Total Incidents';
   value = '107';
+  selectedIncident: any;
 
   colorScheme = {
     domain: ['#c9c9c9', '#58b4cd', '#9247b4', '#45ae94', '#fa631d'],
@@ -78,6 +79,7 @@ export class AppComponent {
     this.colorSchemeBar = {
       domain: [JSON.parse(JSON.stringify(data)).extra.color],
     };
+    this.selectedIncident = JSON.parse(JSON.stringify(data)).name;
     Object.assign(this, { singleBar });
   }
 
