@@ -48,7 +48,14 @@
   background-color: red;
 } */
 
-::ng-deep  .arc:hover {
+// :root {
+//   --colordata: #488cff;
+//   --second-color: #ffff8c;
+// } // we can also define variables with JavaScript
+
+$colordata: var(--colordata);
+
+::ng-deep .arc:hover {
   /* transform: scale(1.1) !important; */
   /* transform: scaleY(1.1) !important; */
   /* position: relative; */
@@ -73,7 +80,7 @@
   /* stroke-width: 3; */
   /* stroke: #58b4cc; */
   // stroke:  var(--background-color);
-  stroke: var(colordata);
+  stroke: $colordata;
   stroke-width: 6px;
 }
 .path:active {

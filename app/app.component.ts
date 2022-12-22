@@ -102,6 +102,9 @@ export class AppComponent {
     // console.log(document.activeElement);
     // this.elementRef.nativeElement.style.setProperty('stroke-width', '6px');
     this.colordata = JSON.parse(JSON.stringify(data)).value.extra.color;
+
+    document.documentElement.style.setProperty('--colordata', this.colordata);
+
     console.log(this.colordata);
     console.log(JSON.parse(JSON.stringify(data)).value.extra.color);
   }
