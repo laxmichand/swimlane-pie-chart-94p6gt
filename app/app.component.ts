@@ -73,6 +73,11 @@ export class AppComponent {
   constructor(public elementRef: ElementRef) {
     this.getCalculate();
     Object.assign(this, { multiLine });
+    this.selectedIncident = JSON.parse(JSON.stringify(this.single[0])).name;
+    this.colorSchemeBar = {
+      domain: [JSON.parse(JSON.stringify(this.single[0])).extra.color],
+    };
+    Object.assign(this, { singleBar });
   }
   onSelect(data): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
