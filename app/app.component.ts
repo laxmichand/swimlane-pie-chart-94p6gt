@@ -84,11 +84,12 @@ export class AppComponent {
   }
 
   onActivate(data): void {
-    // console.log('Activate', JSON.parse(JSON.stringify(data)));
+    console.log('Activate', JSON.parse(JSON.stringify(data)));
     this.name = JSON.parse(JSON.stringify(data)).value.name;
     let temp = JSON.parse(JSON.stringify(data)).value.value;
     this.value = ((Number(this.value) * temp) / 100).toString() + `%`;
-    Object.assign(this, {}); //
+    Object.assign(this, {});
+    console.log(JSON.parse(JSON.stringify(data)).value.extra.color);
   }
 
   onDeactivate(data): void {
