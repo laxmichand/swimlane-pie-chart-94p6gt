@@ -1,0 +1,296 @@
+import { Component, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { singleBar, multiBar, multiLine } from './data';
+import {
+  Directive,
+  ElementRef,
+  Output,
+  EventEmitter,
+  HostListener,
+} from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+})
+export class AppComponent {
+  // single: any[];
+  view: any[] = [300, 400];
+
+  single: any = [
+    {
+      name: 'Unspecified',
+      value: 10,
+      index: 0,
+      extra: {
+        color: 'Unspecified',
+      },
+    },
+    {
+      name: 'Vegetation Fire',
+      value: 25,
+      index: 1,
+      extra: {
+        color: 'Vegetation',
+      },
+    },
+    {
+      name: 'Training',
+      value: 32,
+      index: 2,
+      extra: {
+        color: 'Training',
+      },
+    },
+    {
+      name: 'Vehicle Fire',
+      value: 18,
+      index: 3,
+      extra: {
+        color: 'Vehicle',
+      },
+    },
+    {
+      name: 'Structure Fire',
+      value: 22,
+      index: 4,
+      extra: {
+        color: 'Structure',
+      },
+    },
+    {
+      name: 'demo data',
+      value: 43,
+      index: 5,
+      extra: {
+        color: 'fire',
+      },
+    },
+    {
+      name: 'java script',
+      value: 50,
+      index: 5,
+      extra: {
+        color: 'fire',
+      },
+    },
+    {
+      name: 'python',
+      value: 50,
+      index: 5,
+      extra: {
+        color: 'fire',
+      },
+    },
+    {
+      name: 'Structure',
+      value: 22,
+      index: 4,
+      extra: {
+        color: 'Structure',
+      },
+    },
+  ];
+
+  // options
+  gradient: boolean = true;
+  showLegend: boolean = true;
+  showLabels: boolean = false;
+  isDoughnut: boolean = true;
+  legendPosition: string = 'below';
+
+  name = 'Total Incidents';
+  value = '107';
+
+  colorScheme = {
+    domain: ['#c9c9c9', '#58b4cd', '#9247b4', '#45ae94', '#fa631d'],
+  };
+
+  constructor(private _elementRef: ElementRef) {
+    this.getCalculate();
+    // Object.assign(this, { single });
+    Object.assign(this, { multiLine });
+  }
+
+  // @Output()
+  // public clickOutside = new EventEmitter();
+
+  // @HostListener('document:click', ['$event.target'])
+  // public onClick(targetElement) {
+  //   const clickedInside =
+  //     this._elementRef.nativeElement.contains(targetElement);
+  //   console.log(targetElement, clickedInside);
+  //   if (!clickedInside) {
+  //     this.clickOutside.emit(null);
+  //   }
+  // }
+
+  onSelect(data, element): void {
+    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+
+    // const defs = document.querySelector(
+    //   'g[ng-reflect-color][ng-reflect-color]'
+    // );
+
+    const defs = document.querySelector('defs>[ng-reflect-color]');
+
+    let title = defs.getAttribute('ng-reflect-color');
+    // document.querySelectorAll('[stop]')
+    console.log('defs daat', defs);
+    console.log('title data', title);
+    // let d = this.getAllElementsWithAttribute('ng-reflect-color');
+    // console.log(d);
+    // let col = this.getElementsByAttribute('ng-reflect-color', document);
+
+    // console.log(col);
+
+    // const buttons = document.getElementsByTagName('g');
+
+    // const buttonPressed = (e) => {
+    //   console.log(e.target.id); // Get ID of Clicked Element
+    // };
+
+    // for (let button of buttons) {
+    //   button.addEventListener('click', buttonPressed);
+    // }
+    // window.addEventListener('click', (e) => console.log(e.target));
+
+    window.onclick = (e) => {
+      console.log(e.target);
+    };
+    this.colorSchemeBar = {
+      domain: [JSON.parse(JSON.stringify(data)).extra.color],
+    };
+    Object.assign(this, { singleBar }); //
+  }
+
+  getAllElementsWithAttribute(attribute) {
+    var matchingElements = [];
+    var allElements = document.getElementsByTagName('*');
+    for (var i = 0, n = allElements.length; i < n; i++) {
+      if (allElements[i].getAttribute(attribute) !== null) {
+        // Element exists with attribute. Add to array.
+        matchingElements.push(allElements[i]);
+      }
+    }
+    return matchingElements;
+  }
+  getElementsByAttribute(attribute, context) {
+    var nodeList = (context || document).getElementsByTagName('*');
+    var nodeArray = [];
+    var iterator = 0;
+    var node = null;
+
+    while ((node = nodeList[iterator++])) {
+      if (node.hasAttribute(attribute)) nodeArray.push(node);
+    }
+
+    return nodeArray;
+  }
+
+  onActivate(data): void {
+    // console.log('Activate', JSON.parse(JSON.stringify(data)));
+    this.name = JSON.parse(JSON.stringify(data)).value.name;
+    let temp = JSON.parse(JSON.stringify(data)).value.value;
+    this.value = ((Number(this.value) * temp) / 100).toString() + `%`;
+    Object.assign(this, {}); //
+  }
+
+  onDeactivate(data): void {
+    this.name = 'Total Incidents';
+    this.value = '107';
+    this.getCalculate();
+    Object.assign(this, {});
+    // console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+  }
+
+  getCalculate() {
+    const initialValue = 0;
+    this.value = this.single
+      .map((s) => {
+        return s.value;
+      })
+      .reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        initialValue
+      )
+      .toString();
+    this.single = this.single.map((s, index) => {
+      if (index % 5 === 0) {
+        index = 0;
+      } else {
+        index = index % 5;
+      }
+      return {
+        ...s,
+        color: this.colorScheme.domain[index],
+        extra: {
+          color: this.colorScheme.domain[index],
+        },
+        value: Math.round(s.value * Number(this.value)) / 100,
+      };
+    });
+    Object.assign(this, this.single);
+  }
+
+  singleBar: any[];
+  multiBar: any[];
+
+  viewBar: any[] = [600, 400];
+
+  // options
+  showXAxisBar = true;
+  showYAxisBar = true;
+  gradientBar = false;
+  showLegendBar = false;
+  showXAxisLabelBar = true;
+  // xAxisLabelBar = 'Country';
+  showYAxisLabelBar = true;
+  // yAxisLabelBar = 'Population';
+
+  colorSchemeBar = {
+    domain: ['#c9c9c9', '#58b4cd', '#9247b4', '#45ae94', '#fa631d'],
+  };
+
+  onSelectBar(event) {
+    console.log(event);
+  }
+
+  //
+  multiLine: any[];
+  viewLine: any[] = [600, 300];
+
+  // options
+  legendLine: boolean = false;
+  showLabelsLine: boolean = true;
+  animationsLine: boolean = true;
+  xAxisLine: boolean = true;
+  yAxisLine: boolean = true;
+  showYAxisLabelLine: boolean = true;
+  showXAxisLabelLine: boolean = true;
+  xAxisLabelLine: string = 'Year';
+  yAxisLabelLine: string = 'Population';
+  timelineLine: boolean = true;
+
+  colorSchemeLine = {
+    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5'],
+  };
+
+  onSelectLine(data): void {
+    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+  }
+
+  onActivateLine(data): void {
+    console.log('Activate', JSON.parse(JSON.stringify(data)));
+  }
+
+  onDeactivateLine(data): void {
+    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+  }
+
+  getColor(elem) {
+    alert(elem.style.backgroundColor);
+  }
+}
