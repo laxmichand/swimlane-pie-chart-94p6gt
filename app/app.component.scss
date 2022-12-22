@@ -48,7 +48,7 @@
   background-color: red;
 } */
 
-::ng-deep .ngx-charts .arc:hover {
+::ng-deep  .arc:hover {
   /* transform: scale(1.1) !important; */
   /* transform: scaleY(1.1) !important; */
   /* position: relative; */
@@ -71,7 +71,9 @@
   /* outline: -webkit-focus-ring-color auto 5px !important; */
   /* stroke: rgb(255, 255, 255); */
   /* stroke-width: 3; */
-  stroke: #58b4cc;
+  /* stroke: #58b4cc; */
+  // stroke:  var(--background-color);
+  stroke: var(colordata);
   stroke-width: 6px;
 }
 .path:active {

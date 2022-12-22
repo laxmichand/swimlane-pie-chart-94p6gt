@@ -6,7 +6,7 @@ import { singleBar, multiBar, multiLine } from './data';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   // single: any[];
@@ -82,7 +82,7 @@ export class AppComponent {
     this.selectedIncident = JSON.parse(JSON.stringify(data)).name;
     Object.assign(this, { singleBar });
   }
-
+  colordata: any;
   onActivate(data): void {
     console.log('Activate', JSON.parse(JSON.stringify(data)));
     this.name = JSON.parse(JSON.stringify(data)).value.name;
@@ -101,7 +101,12 @@ export class AppComponent {
     // ).value.extra.color;
     // console.log(document.activeElement);
     // this.elementRef.nativeElement.style.setProperty('stroke-width', '6px');
+    this.colordata = JSON.parse(JSON.stringify(data)).value.extra.color;
+    console.log(this.colordata);
     console.log(JSON.parse(JSON.stringify(data)).value.extra.color);
+  }
+  getColor1() {
+    console.log('get color');
   }
 
   onDeactivate(data): void {
