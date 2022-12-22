@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, ElementRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { singleBar, multiBar, multiLine } from './data';
@@ -70,7 +70,7 @@ export class AppComponent {
     domain: ['#c9c9c9', '#58b4cd', '#9247b4', '#45ae94', '#fa631d'],
   };
 
-  constructor() {
+  constructor(public elementRef: ElementRef) {
     this.getCalculate();
     Object.assign(this, { multiLine });
   }
@@ -89,6 +89,18 @@ export class AppComponent {
     let temp = JSON.parse(JSON.stringify(data)).value.value;
     this.value = ((Number(this.value) * temp) / 100).toString() + `%`;
     Object.assign(this, {});
+    // this.elementRef.nativeElement.class = '::ng-deep .ngx-charts .arc:hover';
+    // this.elementRef.nativeElement.class
+    // this.elementRef.nativeElement.style.setProperty(
+    //   'stroke',
+    //   JSON.parse(JSON.stringify(data)).value.extra.color
+    // );
+
+    // this.elementRef.nativeElement.style.stroke = JSON.parse(
+    //   JSON.stringify(data)
+    // ).value.extra.color;
+    // console.log(document.activeElement);
+    // this.elementRef.nativeElement.style.setProperty('stroke-width', '6px');
     console.log(JSON.parse(JSON.stringify(data)).value.extra.color);
   }
 
@@ -96,6 +108,7 @@ export class AppComponent {
     this.name = 'Total Incidents';
     this.value = '107';
     this.getCalculate();
+    // this.elementRef.nativeElement.style.setProperty('stroke', 'transparent');
     Object.assign(this, {});
     // console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }

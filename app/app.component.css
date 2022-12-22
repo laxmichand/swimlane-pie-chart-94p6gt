@@ -53,7 +53,7 @@
   /* transform: scaleY(1.1) !important; */
   /* position: relative; */
   /* padding: 17px 27px; */
-  /* transition: transform 0.5s !important; */
+  transition: transform 0.5s !important;
   /* padding: 40% !important; */
   /* border-radius: 20% important; */
   /* margin-left: auto !important; */
@@ -72,7 +72,7 @@
   /* stroke: rgb(255, 255, 255); */
   /* stroke-width: 3; */
   stroke: #58b4cc;
-  stroke-width: 5px;
+  stroke-width: 6px;
 }
 .path:active {
   /* transform: scale(1.15) translateX(-9px) translateY(-9px); */
