@@ -197,35 +197,35 @@ export var multiLine = [
       },
     ],
   },
-  // {
-  //   name: 'Janto Jose',
-  //   series: [
-  //     {
-  //       name: '9:21 AM',
-  //       value: 2100,
-  //       min: 800,
-  //       max: 2400,
-  //     },
-  //     {
-  //       name: '9:22 AM',
-  //       value: 1700,
-  //       min: 800,
-  //       max: 2400,
-  //     },
-  //     {
-  //       name: '9:23 AM',
-  //       value: 1000,
-  //       min: 800,
-  //       max: 2400,
-  //     },
-  //     {
-  //       name: '9:23 AM',
-  //       value: 800,
-  //       min: 800,
-  //       max: 2400,
-  //     },
-  //   ],
-  // },
+  {
+    name: 'Janto Jose',
+    series: [
+      {
+        name: '9:21 AM',
+        value: 2100,
+        min: 800,
+        max: 2400,
+      },
+      {
+        name: '9:22 AM',
+        value: 1700,
+        min: 800,
+        max: 2400,
+      },
+      {
+        name: '9:23 AM',
+        value: 1000,
+        min: 800,
+        max: 2400,
+      },
+      {
+        name: '9:23 AM',
+        value: 800,
+        min: 800,
+        max: 2400,
+      },
+    ],
+  },
 
   // {
   //   name: 'Steve Davis',
