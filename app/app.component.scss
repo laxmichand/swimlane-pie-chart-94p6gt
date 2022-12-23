@@ -29,7 +29,8 @@ $colordata: var(--colordata);
   float: left;
 }
 ::ng-deep .arc:hover {
-  transition: transform 8s;
+  // transition: transform 8s;
   stroke: $colordata;
   stroke-width: 6px;
+  transition: 0.5s ease-in !important;
 }

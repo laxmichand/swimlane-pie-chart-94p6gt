@@ -138,7 +138,7 @@ export class AppComponent {
   // options
   showXAxisBar = true;
   showYAxisBar = true;
-  gradientBar = false;
+  gradientBar = true;
   showLegendBar = false;
   showXAxisLabelBar = true;
   xAxisLabelBar = 'Country';
@@ -155,7 +155,7 @@ export class AppComponent {
 
   //
   multiLine: any[];
-  viewLine: any[] = [600, 300];
+  viewLine: any[] = [1000, 600];
 
   // options
   legendLine: boolean = false;
@@ -168,10 +168,21 @@ export class AppComponent {
   xAxisLabelLine: string = 'Time';
   yAxisLabelLine: string = 'Pressure(PSI)';
   timelineLine: boolean = true;
-
+  activeEntries = [{ name: 'date string', value: 85 }];
+  gradientLine = true;
+  autoScaleLine = true;
   colorSchemeLine = {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5'],
   };
+
+  customColors = [
+    {
+      name: 'france',
+      value: '#0000ff',
+    },
+  ];
+
+  
 
   onSelectLine(data): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));

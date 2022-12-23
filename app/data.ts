@@ -124,7 +124,7 @@ export var singleBar = [
   },
 ];
 
-export var multiBar = [
+export var multiLine1 = [
   {
     name: 'Germany',
     series: [
@@ -169,19 +169,172 @@ export var multiBar = [
 ];
 export var multiLine = [
   {
-    name: 'Germany',
+    name: 'Paul Alex',
     series: [
       {
-        name: '9:22 AM',
-        value: 400,
+        name: '9:18 AM',
+        value: 2200,
+        min: 800,
+        max: 2400,
+      },
+      {
+        name: '9:23 AM',
+        value: 1600,
+        min: 800,
+        max: 1800,
       },
       {
         name: '9:24 AM',
-        value: 600,
+        value: 1300,
+        min: 800,
+        max: 2400,
       },
       {
-        name: '9:26 AM',
-        value: 1000,
+        name: '9:28 AM',
+        value: 1100,
+        min: 800,
+        max: 2400,
+      },
+    ],
+  },
+  // {
+  //   name: 'Janto Jose',
+  //   series: [
+  //     {
+  //       name: '9:21 AM',
+  //       value: 2100,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //     {
+  //       name: '9:22 AM',
+  //       value: 1700,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //     {
+  //       name: '9:23 AM',
+  //       value: 1000,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //     {
+  //       name: '9:23 AM',
+  //       value: 800,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   name: 'Steve Davis',
+  //   series: [
+  //     {
+  //       name: '9:24 AM',
+  //       value: 1200,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //     {
+  //       name: '9:25 AM',
+  //       value: 1400,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //     {
+  //       name: '9:26 AM',
+  //       value: 1600,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'Samual Jones',
+  //   series: [
+  //     {
+  //       name: '9:26 AM',
+  //       value: 1600,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //     {
+  //       name: '9:27 AM',
+  //       value: 1800,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'Martin Issac',
+  //   series: [
+  //     {
+  //       name: '9:28 AM',
+  //       value: 2000,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //     {
+  //       name: '9:29 AM',
+  //       value: 2200,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'Beth Murphy',
+  //   series: [
+  //     {
+  //       name: '9:30 AM',
+  //       value: 2200,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //     {
+  //       name: '9:31 AM',
+  //       value: 2300,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'Jeff Mathew',
+  //   series: [
+  //     {
+  //       name: '9:31 AM',
+  //       value: 2200,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //     {
+  //       name: '9:32 AM',
+  //       value: 2400,
+  //       min: 800,
+  //       max: 2400,
+  //     },
+  //   ],
+  // },
+];
+
+export var multiLine2 = [
+  {
+    name: 'Germany',
+    series: [
+      {
+        name: '2010',
+        value: 7300000,
+        min: 7000,
+        max: 7600000,
+      },
+      {
+        name: '2011',
+        value: 8940000,
+        min: 8840000,
+        max: 9300000,
       },
     ],
   },
@@ -190,86 +343,16 @@ export var multiLine = [
     name: 'USA',
     series: [
       {
-        name: '9:22 AM',
-        value: 500,
+        name: '2010',
+        value: 7870000,
+        min: 780,
+        max: 7950000,
       },
       {
-        name: '9:28 AM',
-        value: 300,
-      },
-      {
-        name: '9:20 AM',
-        value: 200,
-      },
-    ],
-  },
-
-  {
-    name: 'France',
-    series: [
-      {
-        name: '9:18 AM',
-        value: 800,
-      },
-      {
-        name: '9:20 AM',
-        value: 1600,
-      },
-      {
-        name: '9:22 AM',
-        value: 1800,
-      },
-    ],
-  },
-  {
-    name: 'UK',
-    series: [
-      {
-        name: '9:24 AM',
-        value: 1400,
-      },
-      {
-        name: '9:25 AM',
-        value: 2400,
-      },
-    ],
-  },
-  {
-    name: 'UK1',
-    series: [
-      {
-        name: '9:26 AM',
-        value: 1400,
-      },
-      {
-        name: '9:32 AM',
-        value: 2400,
-      },
-    ],
-  },
-  {
-    name: 'UK2',
-    series: [
-      {
-        name: '9:28 AM',
-        value: 1400,
-      },
-      {
-        name: '9:29 AM',
-        value: 2400,
-      },
-    ],
-  },
-  {
-    name: 'UK3',
-    series: [
-      {
-        name: '9:30 AM',
-        value: 1400,
-      },
-      {
-        name: '9:31 AM',
-        value: 2400,
+        name: '2011',
+        value: 8270000,
+        min: 8170000,
+        max: 8300000,
       },
     ],
   },

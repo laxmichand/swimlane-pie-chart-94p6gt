@@ -42,7 +42,6 @@
         [view]="viewBar"
         [scheme]="colorSchemeBar"
         [results]="singleBar"
-        [gradient]="gradientBar"
         [xAxis]="showXAxisBar"
         [yAxis]="showYAxisBar"
         [legend]="showLegendBar"
@@ -65,13 +64,23 @@
         [yAxis]="yAxisLine"
         [xAxisLabel]="xAxisLabelLine"
         [yAxisLabel]="yAxisLabelLine"
-        [timeline]="timelineLine"
         [results]="multiLine"
+        [autoScale]="autoScaleLine"
+        [timeline]="timelineLine"
         (select)="onSelectLine($event)"
         (activate)="onActivateLine($event)"
+        [rangeFillOpacity]="0.15"
+        [animations]="true"
+        [activeEntries]="activeEntries"
         (deactivate)="onDeactivateLine($event)"
+        [customColors]="customColors"
       >
       </ngx-charts-line-chart>
     </div>
   </div>
 </div>
+<!-- 
+[gradient]="gradientLine"
+        [showRefLabels]="true"
+        [showRefLines]="true"
+         -->
